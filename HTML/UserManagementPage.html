@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>W3.CSS</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="/Project/CSS/style.css">
+    </head>
+    <body>
+        <!-- Sidebar -->
+        <div class="custom-sidebar" id="sidebar">
+            <!-- Sidebar content -->
+            <div class="logo">
+                <img src="/Project/PNG/Logo/FSKTMLogo.png" alt="FSKTM Logo">
+            </div>
+            <div class="menu-title">Menus</div>
+            <a href="#" class="menu-item active">
+                <img src="/Project/PNG/Icon/dashboard.png" alt="Logout Icon" class="menu-icon"> Dashboard
+            </a>
+            <a href="#" class="menu-item">
+                <img src="/Project/PNG/Icon/userInfo.png" alt="Logout Icon" class="menu-icon"> Athlete Information
+            </a>
+            <a href="#" class="menu-item">
+                <img src="/Project/PNG/Icon/group.png" alt="Logout Icon" class="menu-icon"> AJK Information
+            </a>
+            <a href="#" class="menu-item">
+                <img src="/Project/PNG/Icon/schedule.png" alt="Logout Icon" class="menu-icon"> Training Schedule
+            </a>
+            <a href="#" class="menu-item">
+                <img src="/Project/PNG/Icon/Athlete.png" alt="Logout Icon" class="menu-icon"> Athlete Registration
+            </a>
+            <a href="#" class="menu-item">
+                <img src="/Project/PNG/Icon/aboutUs.png" alt="Logout Icon" class="menu-icon"> About Us
+            </a>
+            <a href="#" class="menu-item">
+                <img src="/Project/PNG/Icon/logout.png" alt="Logout Icon" class="menu-icon"> Logout
+            </a>
+            <!-- &#9998; -->
+        </div>
+
+        <!-- Main Content -->
+        <div class="content" id="content">
+            <input class="icon" type="image" src="/Project/PNG/Icon/sidebarIcon.png" onclick="toggleSidebar()"/>
+            <h1>Hi, User Name</h1>
+            <p>Welcome to admin page</p>
+
+            <!-- Main Content Box -->
+            <div class="contentBox">
+                <p>Put Your Content Here</p>
+                <p>Put Your Content Here</p>
+                <p>Put Your Content Here</p>
+                <p>Put Your Content Here</p>
+                <p>Put Your Content Here</p>
+            </div>
+        </div>
+
+        <!-- JavaScript -->
+        <script>
+            function toggleSidebar() {
+                // Select sidebar and content elements
+                const sidebar = document.getElementById('sidebar');
+                const content = document.getElementById('content');
+
+                // Toggle hidden class on the sidebar
+                sidebar.classList.toggle('hidden');
+                content.classList.toggle('sidebar-hidden');
+            }
+        </script>
+    </body>
+</html>
