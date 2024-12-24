@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>W3.CSS Carousel</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> <!-- W3.CSS -->
+        <link rel="stylesheet" href="styles.css">
+        <style>
+            .custom-carousel img, .custom-carousel video {
+                width: 100%; 
+                height: auto; 
+                display: block; 
+                margin: auto;
+            }
+            .saf-introduction {
+                text-align: center;
+                margin: 20px auto 60px auto;
+                max-width: 800px;
+                font-family: Arial, sans-serif;
+                font-size: 16px;
+                line-height: 1.6;
+                color: #333;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Sidebar -->
+        <div class="custom-sidebar" id="sidebar">
+            <!-- Sidebar content -->
+            <div class="logo">
+                <img src="img/FSKTMLogo.png" alt="FSKTM Logo">
+            </div>
+            <div class="menu-title">Menus</div>
+            <a href="#" class="menu-item active">
+                <img src="img/dashboard.png" alt="dashboard icon" class="menu-icon"> Dashboard
+            </a>
+            <a href="#" class="menu-item">
+                <img src="img/userInfo.png" alt="User info Icon" class="menu-icon"> Athlete Information
+            </a>
+            <a href="#" class="menu-item">
+                <img src="img/group.png" alt="Group Icon" class="menu-icon"> AJK Information
+            </a>
+            <a href="#" class="menu-item">
+                <img src="img/schedule.png" alt="Schedule Icon" class="menu-icon"> Training Schedule
+            </a>
+            <a href="#" class="menu-item">
+                <img src="img/Athlete.png" alt="Athlete Icon" class="menu-icon"> Athlete Registration
+            </a>
+            <a href="#" class="menu-item">
+                <img src="img/aboutUs.png" alt="Aboutus Icon" class="menu-icon"> About Us
+            </a>
+            <a href="#" class="menu-item">
+                <img src="img/logout.png" alt="Logout Icon" class="menu-icon"> Logout
+            </a>
+        </div>
+
+        <div class="content" id="content">
+            <input class="icon" type="image" src="img/sidebarIcon.png" onclick="toggleSidebar()"/>
+            <h1>Hi, User Name</h1>
+            <p>Welcome to the admin page</p>
+            <br><br>
+
+            <div class="w3-content w3-display-container custom-carousel" style="max-width:800px; margin-top: 20px;">
+                <!-- Slide 1: Image -->
+                <div class="w3-display-container mySlides">
+                    <img src="img/SAF%201.jpg" alt="Slide 1">
+                </div>
+
+                <div class="w3-display-container mySlides">
+                    <img src="img/SAF%202.jpg" alt="Slide 2">
+                </div>
+
+                <div class="w3-display-container mySlides">
+                    <img src="img/SAF%203.jpg" alt="Slide 3">
+                </div>
+
+                <div class="w3-display-container mySlides">
+                    <video controls>
+                        <source src="img/SAF%20V1.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+
+                <div class="w3-display-container mySlides">
+                    <img src="img/SAF%204.jpg" alt="Slide 4">
+                </div>
+                
+                <div class="w3-display-container mySlides">
+                    <img src="img/SAF%205.jpg" alt="Slide 5">
+                </div>
+
+                <div class="w3-display-container mySlides">
+                    <img src="img/SAF%206.jpg" alt="Slide 6">
+                </div>
+                
+                <div class="w3-display-container mySlides">
+                    <img src="img/SAF%207.jpg" alt="Slide 7">
+                </div>
+                
+                <div class="w3-display-container mySlides">
+                    <img src="img/SAF%208.jpg" alt="Slide 8">
+                </div>
+                
+                <div class="w3-display-container mySlides">
+                    <video controls>
+                        <source src="img/SAF%20V2.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                
+                <div class="w3-display-container mySlides">
+                    <img src="img/SAF%209.jpg" alt="Slide 9">
+                </div>
+
+                <div class="w3-display-container mySlides">
+                    <img src="img/SAF%2010.jpg" alt="Slide 10">
+                </div>
+                
+                <div class="w3-display-container mySlides">
+                    <video controls>
+                        <source src="img/SAF%20V3.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                
+                <div class="w3-display-container mySlides">
+                    <img src="img/SAF%2011.jpg" alt="Slide 11">
+                </div>
+                
+                <!-- Next/Previous Buttons -->
+                <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+                <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+            </div>
+
+            <br><br>
+            <div class="saf-introduction">
+                <p>SAF is an interfaculty sports event organized at Universiti Tun Hussein Onn Malaysia (UTHM) to encourage students with talents in sports. SAF is dedicated to fostering a healthy and active lifestyle. Next, SAF also fosters teamwork, discipline, and leadership through various sports and athletic activities. Moreover, our mission is to provide opportunities for students to showcase their athletic potential, represent the faculty in inter-faculty competitions, and build a community that values physical fitness and camaraderie. Whether you're a seasoned athlete or just starting your fitness journey, SAF offers an inclusive environment for everyone to participate, grow, and thrive. Together, let's elevate sports excellence and nurture a strong spirit of unity and sportsmanship within UTHM students.</p>
+            </div>
+        </div>
+
+        <!-- JavaScript -->
+        <script>
+            function toggleSidebar() {
+                // Select sidebar and content elements
+                const sidebar = document.getElementById('sidebar');
+                const content = document.getElementById('content');
+
+                // Toggle hidden class on the sidebar
+                sidebar.classList.toggle('hidden');
+                content.classList.toggle('sidebar-hidden');
+            }
+
+            let slideIndex = 1;
+            showDivs(slideIndex);
+
+            function plusDivs(n) {
+                showDivs(slideIndex += n);
+            }
+
+            function showDivs(n) {
+                let i;
+                let slides = document.getElementsByClassName("mySlides");
+                if (n > slides.length) { slideIndex = 1 }
+                if (n < 1) { slideIndex = slides.length }
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                slides[slideIndex - 1].style.display = "block";
+            }
+        </script>
+    </body>
+</html>
